@@ -1,0 +1,136 @@
+<footer class="footer">
+  <div class="container footer-grid ">
+    <div class="footer-brand">
+      <a href="/" aria-label="SonIA, inicio">
+        <img src="/logo.png" width="1466" height="638" alt="SonIA" />
+      </a>
+      <p>De grandes volúmenes de candidatos a un ranking explicable y preparado para actuar.</p>
+    </div>
+
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Contacto</h2>
+      <a href="mailto:hola@sonia-hr.com">hola@sonia-hr.com</a>
+      <a href="tel:+34931175575">+34 931 175 575</a>
+    </section>
+
+    <nav aria-labelledby="legal-title">
+      <h2 id="legal-title">Legal</h2>
+      <a href="/aviso-legal" target="_blank" rel="noopener noreferrer">Aviso Legal</a>
+      <a href="/politica-privacidad" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>
+      <a href="/condiciones-servicio" target="_blank" rel="noopener noreferrer">Condiciones de Servicio</a>
+      <a href="/eliminacion-datos-usuarios" target="_blank" rel="noopener noreferrer">Eliminación de Datos</a>
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 ROVIJ ASOCIADOS SL.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--purple-900);
+    border-top: 1px solid rgb(255 255 255 / 12%);
+    color: var(--fg-on-brand);
+    padding: var(--space-16) 0 var(--space-6);
+  }
+
+  .footer-grid {
+    display: grid;
+    column-gap: clamp(80px, 10vw, 128px);
+    grid-template-columns: minmax(260px, 320px) repeat(3, max-content);
+    justify-content: center;
+    row-gap: var(--space-10);
+  }
+
+  .footer-brand {
+    display: grid;
+    gap: var(--space-5);
+    max-width: 320px;
+  }
+
+  .footer-brand a {
+    border-radius: var(--radius-md);
+    display: inline-block;
+    justify-self: start;
+    overflow: hidden;
+  }
+
+  .footer-brand img {
+    display: block;
+    height: 44px;
+    object-fit: contain;
+    width: auto;
+  }
+
+  section,
+  nav {
+    align-content: start;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  h2 {
+    color: var(--fg-on-brand);
+    font-size: var(--text-sm);
+    letter-spacing: 0;
+  }
+
+  p,
+  address,
+  a {
+    color: rgb(244 245 250 / 72%);
+    font-size: var(--text-sm);
+    font-style: normal;
+    line-height: 1.65;
+  }
+
+  section a,
+  nav a {
+    justify-self: start;
+    transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+  }
+
+  section a:hover,
+  nav a:hover {
+    color: var(--gold-400);
+    text-decoration: none;
+    transform: translateX(2px);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgb(255 255 255 / 12%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: space-between;
+    margin-top: var(--space-12);
+    padding-top: var(--space-5);
+  }
+
+  .footer-bottom p {
+    font-size: var(--text-xs);
+  }
+
+  @media (max-width: 1100px) {
+    .footer-grid {
+      column-gap: var(--space-10);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      justify-content: stretch;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer {
+      padding-top: var(--space-12);
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+    }
+  }
+</style>

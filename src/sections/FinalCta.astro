@@ -1,0 +1,68 @@
+<section class="section final-cta" id="contacto" aria-labelledby="cta-title">
+  <div class="container cta-box animate-zoom-in timeline-view animate-range-[entry_0%_cover_35%]">
+    <div class="cta-copy prose prose-lg prose-invert max-w-none">
+      <p class="eyebrow not-prose">Siguiente paso</p>
+      <h2 id="cta-title">Comprueba cómo SonIA encaja en una oferta real de tu equipo.</h2>
+      <p>Cuéntanos qué perfiles buscas, cuántos CVs recibes y cómo realizas hoy el primer filtro. Revisaremos contigo si SonIA encaja en el proceso.</p>
+    </div>
+    <a class="button button-primary cta-link" href="/contacto" target="_blank" rel="noopener noreferrer">Solicitar una demo</a>
+  </div>
+</section>
+
+<style>
+  .final-cta {
+    padding-top: 0;
+  }
+
+  .cta-box {
+    background:
+      radial-gradient(circle at 85% 20%, rgb(251 195 60 / 26%), transparent 18rem),
+      var(--purple-900);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 26px 70px rgb(53 47 76 / 18%);
+    display: grid;
+    gap: var(--space-5);
+    justify-items: start;
+    padding: clamp(var(--space-8), 6vw, var(--space-16));
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-box::after {
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 999px;
+    content: "";
+    height: 220px;
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    width: 220px;
+  }
+
+  .cta-copy {
+    display: grid;
+    gap: var(--space-4);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-copy h2,
+  .cta-copy p {
+    margin: 0;
+  }
+
+  .cta-box h2,
+  .cta-box p {
+    color: var(--fg-on-brand);
+    max-width: 760px;
+  }
+
+  .cta-box .eyebrow {
+    color: var(--gold-400);
+  }
+
+  .cta-link {
+    position: relative;
+    z-index: 1;
+  }
+</style>

@@ -1,0 +1,226 @@
+<section class="process" id="como-funciona" aria-labelledby="process-title">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+    <header class="process-heading animate-fade-in-up timeline-view animate-range-[entry_0%_cover_32%]">
+      <div class="prose prose-lg prose-sonia max-w-none">
+        <p class="eyebrow not-prose">Cómo funciona</p>
+        <h2 id="process-title">De la oferta a un ranking que tu equipo puede revisar.</h2>
+      </div>
+      <p class="process-lead">SonIA conecta los requisitos de la oferta con el análisis, la priorización y el contacto. El equipo mantiene el criterio y decide quién avanza.</p>
+    </header>
+
+    <ol class="workflow animate-fade-in-up timeline-view animate-range-[entry_8%_cover_45%]" aria-label="Flujo de selección con SonIA">
+      <li>
+        <div class="step-meta">
+          <span class="step-number">01</span>
+          <span class="step-type">Oferta</span>
+        </div>
+        <div class="step-copy prose prose-sm prose-sonia max-w-none">
+          <h3>Define la oferta</h3>
+          <p>Sube el documento y ajusta los requisitos y su importancia.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-meta">
+          <span class="step-number">02</span>
+          <span class="step-type">Candidatos</span>
+        </div>
+        <div class="step-copy prose prose-sm prose-sonia max-w-none">
+          <h3>Incorpora candidatos</h3>
+          <p>Carga CVs o reutiliza perfiles de procesos anteriores.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-meta">
+          <span class="step-number">03</span>
+          <span class="step-type">Decisión</span>
+        </div>
+        <div class="step-copy prose prose-sm prose-sonia max-w-none">
+          <h3>Activa el ranking</h3>
+          <p>Prioriza candidatos y muestra su encaje con los requisitos clave.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-meta">
+          <span class="step-number">04</span>
+          <span class="step-type">Acción</span>
+        </div>
+        <div class="step-copy prose prose-sm prose-sonia max-w-none">
+          <h3>Contacto y avance</h3>
+          <p>Automatiza la recogida de datos y el seguimiento.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<style>
+  .process {
+    background: var(--surface);
+    padding-block: 0 clamp(var(--space-12), 7vw, var(--space-20));
+  }
+
+  .section-divider {
+    background: var(--surface-sunk);
+    border-block: 1px solid var(--border);
+    box-shadow: inset 0 1px rgb(255 255 255 / 72%);
+    height: 12px;
+    margin-bottom: clamp(var(--space-12), 6vw, var(--space-16));
+  }
+
+  .process-heading {
+    align-items: end;
+    display: grid;
+    gap: clamp(var(--space-6), 3vw, var(--space-10));
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+    margin-bottom: var(--space-10);
+  }
+
+  .process-heading :global(.prose) {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .process-heading :global(h2),
+  .process-heading :global(p) {
+    margin: 0;
+  }
+
+  .process-heading :global(h2) {
+    font-size: clamp(var(--text-xl), 3.8vw, var(--text-3xl));
+    line-height: 1.14;
+    max-width: 760px;
+  }
+
+  .process-lead {
+    border-left: 3px solid var(--gold-400);
+    font-size: var(--text-base);
+    padding-left: var(--space-5);
+  }
+
+  .workflow {
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .workflow li {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 32px rgb(37 32 56 / 7%);
+    display: grid;
+    gap: var(--space-8);
+    min-height: 230px;
+    padding: var(--space-6);
+    position: relative;
+    transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+  }
+
+  .workflow li:hover {
+    background: var(--purple-50);
+    border-color: var(--purple-200);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .workflow li::after {
+    background: var(--purple-600);
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur) var(--ease);
+    width: 100%;
+  }
+
+  .workflow li:hover::after {
+    transform: scaleX(1);
+  }
+
+  .step-meta {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .step-number {
+    align-items: center;
+    background: var(--gold-100);
+    border-radius: var(--radius-full);
+    color: var(--ink-900);
+    display: inline-flex;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    height: 38px;
+    justify-content: center;
+    width: 38px;
+  }
+
+  .step-type {
+    background: var(--ink-50);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    color: var(--fg3);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: var(--tracking-wide);
+    padding: var(--space-1) var(--space-2);
+    text-transform: uppercase;
+  }
+
+  .step-copy {
+    align-self: end;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .step-copy :global(h3),
+  .step-copy :global(p) {
+    margin: 0;
+  }
+
+  .step-copy :global(h3) {
+    font-size: var(--text-md);
+  }
+
+  @media (max-width: 900px) {
+    .process-heading {
+      align-items: start;
+      gap: var(--space-6);
+      grid-template-columns: 1fr;
+    }
+
+    .process-lead {
+      max-width: 680px;
+    }
+
+    .workflow {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+  }
+
+  @media (max-width: 560px) {
+    .process-heading {
+      margin-bottom: var(--space-8);
+    }
+
+    .workflow {
+      grid-template-columns: 1fr;
+    }
+
+    .workflow li {
+      gap: var(--space-5);
+      min-height: auto;
+    }
+
+  }
+</style>

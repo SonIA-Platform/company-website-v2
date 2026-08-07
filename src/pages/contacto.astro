@@ -1,0 +1,337 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Footer from '@/sections/Footer.astro';
+
+const canonical = Astro.site ? new URL('/contacto', Astro.site).toString() : undefined;
+---
+
+<Layout
+  title="Solicitar una demo | SonIA"
+  description="Cuéntanos cómo gestionas el primer filtro de candidatos y descubre si SonIA encaja con el volumen y los criterios de tu equipo."
+  canonical={canonical}
+>
+  <header class="contact-header">
+    <div class="container contact-nav">
+      <a class="contact-brand" href="/" aria-label="SonIA, volver al inicio">
+        <img src="/logo.png" width="1466" height="638" alt="SonIA" />
+      </a>
+      <a href="/">Volver a la web</a>
+    </div>
+  </header>
+
+  <main class="contact-main" id="contenido">
+    <div class="container contact-grid">
+      <section class="contact-intro" aria-labelledby="contact-title">
+        <p class="eyebrow">Solicita una demo</p>
+        <h1 id="contact-title">Cuéntanos cómo gestionas hoy el primer filtro de candidatos.</h1>
+        <p>Comparte el tipo de procesos, el volumen habitual por oferta y cómo define tu equipo los criterios de selección.</p>
+        <ul>
+          <li><span>01</span>Oferta, requisitos y prioridades</li>
+          <li><span>02</span>Volumen de CVs y prefiltrado</li>
+          <li><span>03</span>Ranking y contacto</li>
+        </ul>
+      </section>
+
+      <section class="form-card" aria-labelledby="form-title">
+        <header>
+          <p class="eyebrow">Formulario de contacto</p>
+          <h2 id="form-title">Háblanos de tu caso</h2>
+          <p>Los campos marcados con * son obligatorios.</p>
+        </header>
+
+        <form method="post">
+          <div class="field-grid">
+            <div class="field">
+              <label for="name">Nombre y apellidos *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email profesional *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="company">Empresa *</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required />
+            </div>
+            <div class="field">
+              <label for="role">Cargo</label>
+              <input id="role" name="role" type="text" autocomplete="organization-title" />
+            </div>
+            <div class="field">
+              <label for="phone">Teléfono</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="volume">Volumen habitual de CVs por oferta</label>
+              <select id="volume" name="volume">
+                <option value="">Selecciona una opción</option>
+                <option value="up-to-50">Hasta 50</option>
+                <option value="50-to-100">Entre 50 y 100</option>
+                <option value="100-to-500">Entre 100 y 500</option>
+                <option value="more-than-500">Más de 500</option>
+                <option value="explain">Prefiero explicarlo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">¿Cómo gestionáis hoy el primer filtro y qué os gustaría mejorar? *</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <label class="consent" for="privacy">
+            <input id="privacy" name="privacy" type="checkbox" required />
+            <span>He leído y acepto la <a href="/politica-privacidad" target="_blank" rel="noopener noreferrer">Política de Privacidad</a>. *</span>
+          </label>
+
+          <div class="form-actions">
+            <button class="button button-primary" type="submit" disabled>Enviar solicitud</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .contact-header {
+    background: var(--purple-900);
+    border-bottom: 1px solid rgb(255 255 255 / 12%);
+  }
+
+  .contact-nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 76px;
+  }
+
+  .contact-brand {
+    border-radius: var(--radius-md);
+    display: block;
+    overflow: hidden;
+  }
+
+  .contact-brand img {
+    display: block;
+    height: 42px;
+    object-fit: contain;
+    width: auto;
+  }
+
+  .contact-nav > a:last-child {
+    color: var(--fg-on-brand);
+    font-size: var(--text-sm);
+    font-weight: 700;
+  }
+
+  .contact-main {
+    background:
+      radial-gradient(circle at 8% 12%, rgb(105 94 156 / 10%), transparent 26rem),
+      var(--paper);
+    padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+  }
+
+  .contact-grid {
+    align-items: start;
+    display: grid;
+    gap: clamp(var(--space-8), 7vw, var(--space-20));
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .contact-intro {
+    display: grid;
+    gap: var(--space-5);
+    padding-top: var(--space-5);
+  }
+
+  .contact-intro h1 {
+    font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
+    line-height: var(--leading-tight);
+  }
+
+  .contact-intro > p:last-of-type {
+    font-size: var(--text-md);
+  }
+
+  .contact-intro ul {
+    display: grid;
+    gap: var(--space-3);
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+  }
+
+  .contact-intro li {
+    align-items: center;
+    background: rgb(255 255 255 / 72%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    color: var(--ink-700);
+    display: grid;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    gap: var(--space-3);
+    grid-template-columns: auto 1fr;
+    padding: var(--space-4);
+  }
+
+  .contact-intro li span {
+    color: var(--purple-600);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+  }
+
+  .form-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: 0 24px 70px rgb(37 32 56 / 12%);
+    display: grid;
+    gap: var(--space-8);
+    padding: clamp(var(--space-6), 5vw, var(--space-10));
+  }
+
+  .form-card > header {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .form-card h2 {
+    font-size: var(--text-xl);
+  }
+
+  .form-card > header > p:last-child {
+    font-size: var(--text-sm);
+  }
+
+  form {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .field-grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .field {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  label {
+    color: var(--ink-800);
+    font-size: var(--text-sm);
+    font-weight: 700;
+  }
+
+  input,
+  select,
+  textarea {
+    background: var(--surface);
+    border: 1px solid var(--ink-300);
+    border-radius: var(--radius-md);
+    color: var(--ink-900);
+    font: inherit;
+    min-height: 46px;
+    padding: var(--space-3) var(--space-4);
+    transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 132px;
+    resize: vertical;
+  }
+
+  input:hover,
+  select:hover,
+  textarea:hover {
+    border-color: var(--purple-300);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--purple-600);
+    box-shadow: 0 0 0 3px var(--purple-100);
+    outline: none;
+  }
+
+  .consent {
+    align-items: start;
+    display: grid;
+    font-weight: 500;
+    gap: var(--space-3);
+    grid-template-columns: auto 1fr;
+    line-height: 1.6;
+  }
+
+  .consent input {
+    height: 18px;
+    margin-top: 3px;
+    min-height: 0;
+    padding: 0;
+    width: 18px;
+  }
+
+  .consent a {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .form-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  .form-actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.62;
+  }
+
+  .form-actions p {
+    font-size: var(--text-xs);
+    max-width: 320px;
+  }
+
+  @media (max-width: 860px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-intro {
+      max-width: 720px;
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contact-nav {
+      min-height: 68px;
+    }
+
+    .contact-nav > a:last-child {
+      display: none;
+    }
+
+    .field-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-card {
+      border-radius: var(--radius-xl);
+    }
+
+    .form-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+</style>
