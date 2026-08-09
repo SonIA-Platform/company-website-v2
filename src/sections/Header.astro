@@ -1,23 +1,45 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand animate-blurred-fade-in animate-duration-slower" href="/" aria-label="SonIA, inicio">
-      <span class="brand-logo" aria-hidden="true">
-        <img class="logo-icon" src="/logo_sonia_icon.png" width="512" height="512" alt="" />
-        <img class="logo-full" src="/logo.png" width="1466" height="638" alt="" />
-      </span>
+      <img src="/logo.png" width="1466" height="638" alt="SonIA" />
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#producto">Producto</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+      <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" /></svg>
+      <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41" /></svg>
+    </button>
     <a class="button button-primary header-cta" href="#contacto">Solicitar una demo</a>
   </div>
 </header>
 
+<script>
+  const themeToggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
+
+  const updateThemeToggle = () => {
+    if (!themeToggle) return;
+    const isDark = document.documentElement.dataset.theme === 'dark';
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
+  };
+
+  updateThemeToggle();
+
+  themeToggle?.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem('sonia-theme', nextTheme);
+    updateThemeToggle();
+  });
+</script>
+
 <style>
   .site-header {
-    background: rgb(247 248 248 / 92%);
+    background: var(--paper);
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(14px);
     box-shadow: 0 1px 0 rgb(255 255 255 / 70%) inset;
@@ -36,65 +58,20 @@
 
   .brand {
     align-items: center;
-    display: inline-flex;
     border-radius: var(--radius-md);
+    display: inline-flex;
+    overflow: hidden;
   }
 
   .brand:hover {
     text-decoration: none;
   }
 
-  .brand-logo {
-    background: var(--purple-600);
-    border-radius: var(--radius-md);
+  .brand img {
     display: block;
     height: 42px;
-    overflow: hidden;
-    position: relative;
-    transition: width 420ms var(--ease), box-shadow 320ms var(--ease);
-    width: 42px;
-  }
-
-  .brand-logo img {
-    display: block;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: opacity 300ms var(--ease), transform 420ms var(--ease);
-  }
-
-  .logo-icon {
-    height: 42px;
-    object-fit: cover;
-    opacity: 1;
-    transform: scale(1);
-    width: 42px;
-  }
-
-  .logo-full {
-    height: 42px;
-    opacity: 0;
-    transform: translateX(-4px) scale(0.98);
+    object-fit: contain;
     width: auto;
-  }
-
-  .brand:hover .brand-logo,
-  .brand:focus-visible .brand-logo {
-    box-shadow: var(--shadow-sm);
-    width: 98px;
-  }
-
-  .brand:hover .logo-icon,
-  .brand:focus-visible .logo-icon {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-
-  .brand:hover .logo-full,
-  .brand:focus-visible .logo-full {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    transition-delay: 70ms, 0ms;
   }
 
   .nav {
@@ -135,6 +112,60 @@
     transform: scaleX(1);
   }
 
+  .theme-toggle {
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    color: var(--purple-700);
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 auto;
+    height: 42px;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease);
+    width: 42px;
+  }
+
+  .theme-toggle:hover {
+    background: var(--purple-50);
+    border-color: var(--purple-300);
+    transform: translateY(-1px);
+  }
+
+  .theme-icon {
+    fill: none;
+    height: 19px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+    width: 19px;
+  }
+
+  .theme-icon-sun {
+    display: none;
+  }
+
+  :global(html[data-theme="dark"]) .theme-icon-moon {
+    display: none;
+  }
+
+  :global(html[data-theme="dark"]) .theme-icon-sun {
+    display: block;
+  }
+
+  :global(html[data-theme="dark"]) .site-header {
+    background: var(--paper);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 7%) inset;
+  }
+
+  :global(html[data-theme="dark"]) .nav a:hover {
+    color: var(--purple-300);
+  }
+
   @media (max-width: 760px) {
     .header-inner {
       flex-wrap: wrap;
@@ -149,14 +180,14 @@
     }
 
     .header-cta {
-      margin-left: auto;
+      margin-left: 0;
       padding-inline: var(--space-4);
     }
   }
 
   @media (min-width: 761px) {
     .header-cta {
-      margin-left: auto;
+      margin-left: 0;
     }
   }
 </style>

@@ -211,7 +211,7 @@
   }
 
   .benefit {
-    border: 1px solid rgb(225 223 231 / 88%);
+    border: 1px solid var(--border);
     border-radius: 22px;
     box-shadow: 0 10px 30px rgb(20 17 31 / 10%);
     display: grid;
@@ -246,9 +246,9 @@
 
   .benefit-meta > .benefit-number {
     align-items: center;
-    background: var(--gold-100);
+    background: var(--number-bg);
     border-radius: var(--radius-full);
-    color: var(--ink-900);
+    color: var(--fg-on-gold);
     display: inline-flex;
     font-family: var(--font-mono);
     font-size: var(--text-sm);
@@ -260,7 +260,7 @@
   }
 
   .benefit-meta > .benefit-label {
-    background: rgb(255 255 255 / 66%);
+    background: var(--surface);
     border: 1px solid var(--purple-400);
     border-radius: var(--radius-full);
     color: var(--purple-700);
@@ -337,6 +337,10 @@
     height: 24px;
     object-fit: contain;
     width: 24px;
+  }
+
+  :global(html[data-theme="dark"]) .cv-item img {
+    filter: invert(1);
   }
 
   .cv-item > span {
@@ -455,7 +459,7 @@
   .shortlist-heading span {
     background: var(--gold-100);
     border-radius: var(--radius-full);
-    color: var(--ink-800);
+    color: var(--fg-on-gold);
     font-size: 0.5625rem;
     font-weight: 800;
     padding: 2px var(--space-2);

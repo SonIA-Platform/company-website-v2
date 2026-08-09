@@ -15,9 +15,21 @@ const { title, description = 'SonIA ayuda a equipos de selección a priorizar gr
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light dark" />
 		<meta name="description" content={description} />
 		{canonical && <link rel="canonical" href={canonical} />}
 		<link rel="icon" href="/favicon.ico" />
+		<script is:inline>
+			(() => {
+				try {
+					const savedTheme = localStorage.getItem('sonia-theme');
+					const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+					document.documentElement.dataset.theme = savedTheme || systemTheme;
+				} catch {
+					document.documentElement.dataset.theme = 'light';
+				}
+			})();
+		</script>
 		<title>{title}</title>
 	</head>
 	<body>

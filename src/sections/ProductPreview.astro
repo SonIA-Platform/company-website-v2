@@ -1,196 +1,111 @@
 <section class="product-section" id="producto" aria-labelledby="product-title">
   <div class="container">
-    <header class="product-heading animate-fade-in-up timeline-view animate-range-[entry_0%_cover_25%]">
+    <header class="product-heading">
       <div class="prose prose-lg prose-sonia max-w-none">
-        <p class="eyebrow not-prose">Producto tangible</p>
-        <h2 id="product-title">Entiende y valida cada posición en el ranking</h2>
+        <p class="eyebrow not-prose">Anatomía del ranking</p>
+        <h2 id="product-title">El peso de cada requisito cambia el resultado.</h2>
       </div>
-      <p>Filtra candidatos, revisa su encaje con los requisitos prioritarios y prepara un ranking sin perder de vista los puntos que necesitan validación.</p>
+      <p>SonIA no busca una coincidencia genérica. Relaciona lo que exige la oferta con las señales disponibles en cada CV y deja el resultado preparado para revisión.</p>
     </header>
 
-    <div class="ranking-shell animate-blurred-fade-in timeline-view animate-range-[entry_0%_cover_28%]" aria-label="Vista demostrativa del ranking de candidatos de SonIA">
-      <header class="ranking-toolbar">
-        <div class="offer-context">
-          <span class="context-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" /></svg>
-          </span>
-          <span>
-            <small>Oferta activa</small>
-            <strong>Operaciones y atención al cliente</strong>
-          </span>
-        </div>
-        <div class="toolbar-status">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span>Ranking actualizado</span>
-          <b>Demo</b>
+    <figure class="ranking-anatomy" aria-labelledby="anatomy-title">
+      <header class="anatomy-heading">
+        <span>Esquema ilustrativo</span>
+        <div>
+          <small>Ejemplo</small>
+          <strong id="anatomy-title">Cómo se construye una prioridad revisable</strong>
         </div>
       </header>
 
-      <div class="ranking-controls" aria-label="Controles disponibles en el ranking">
-        <span class="control control-search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
-          Buscar candidato
-        </span>
-        <span class="control">
-          Todas las etiquetas
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4" /></svg>
-        </span>
-        <span class="control">
-          Encaje mínimo: 50
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4 4 4-4" /></svg>
-        </span>
-        <span class="control control-accent">Seleccionar Top 10</span>
-      </div>
-
-      <div class="ranking-body">
-        <aside class="candidate-panel" aria-label="Candidatos priorizados">
-          <div class="panel-heading">
-            <span><small>Resultado</small><strong>Ranking de candidatos</strong></span>
-            <b>3 perfiles</b>
-          </div>
-
-          <ol class="candidate-ranking">
-            <li class="candidate-card candidate-active">
-              <span class="position">#1</span>
-              <span class="candidate-info">
-                <strong>Perfil A</strong>
-                <small>Requisitos prioritarios cubiertos</small>
-                <span class="fit fit-strong">Encaje alto</span>
-              </span>
-              <span class="candidate-score"><b>86</b><small>puntos</small></span>
-            </li>
-            <li class="candidate-card">
-              <span class="position">#2</span>
-              <span class="candidate-info">
-                <strong>Perfil B</strong>
-                <small>Disponibilidad por confirmar</small>
-                <span class="fit fit-medium">Encaje medio</span>
-              </span>
-              <span class="candidate-score"><b>72</b><small>puntos</small></span>
-            </li>
-            <li class="candidate-card">
-              <span class="position">#3</span>
-              <span class="candidate-info">
-                <strong>Perfil C</strong>
-                <small>Menor ajuste en funciones clave</small>
-                <span class="fit fit-low">Encaje bajo</span>
-              </span>
-              <span class="candidate-score"><b>48</b><small>puntos</small></span>
-            </li>
-          </ol>
-
-          <div class="panel-note">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7" /></svg>
-            <span><strong>Orden revisable</strong><small>Aplica filtros sin perder el detalle.</small></span>
-          </div>
-        </aside>
-
-        <article class="candidate-detail" aria-labelledby="candidate-title">
-          <header class="detail-heading">
-            <div class="profile-heading">
-              <span class="profile-avatar" aria-hidden="true">PA</span>
-              <span>
-                <small>Posición 1 del ranking</small>
-                <strong id="candidate-title">Perfil A</strong>
-              </span>
-            </div>
-            <div class="detail-score">
-              <span><b>86</b><small>/ 100</small></span>
-              <em>Encaje alto</em>
-            </div>
+      <div class="anatomy-stage">
+        <article class="anatomy-card requirement-card">
+          <header>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" /></svg>
+            </span>
+            <span><small>La oferta define</small><h3>Qué importa y cuánto</h3></span>
           </header>
 
-          <div class="candidate-actions" aria-label="Acciones disponibles para el candidato">
-            <span class="action-tag action-selected">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
-              Preseleccionado
+          <ul class="factor-list">
+            <li>
+              <span><strong>Experiencia similar</strong><small>Requisito crítico</small></span>
+              <span class="weight weight-critical" aria-label="Peso crítico"><i></i><i></i><i></i><i></i></span>
+            </li>
+            <li>
+              <span><strong>Atención al cliente</strong><small>Importancia alta</small></span>
+              <span class="weight weight-high" aria-label="Peso alto"><i></i><i></i><i></i><i></i></span>
+            </li>
+            <li>
+              <span><strong>Disponibilidad</strong><small>Importancia media</small></span>
+              <span class="weight weight-medium" aria-label="Peso medio"><i></i><i></i><i></i><i></i></span>
+            </li>
+          </ul>
+        </article>
+
+        <div class="logic-node" aria-label="SonIA relaciona la información">
+          <span class="plus-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+          </span>
+        </div>
+
+        <article class="anatomy-card evidence-card">
+          <header>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M8 13h8M8 17h5" /></svg>
             </span>
-            <span class="action-tag">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" /></svg>
-              Añadir comentario
-            </span>
-            <span class="action-tag">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-3-6.25" /><path d="M20 4v6h-6" /></svg>
-              Cambiar etiqueta
-            </span>
+            <span><small>El CV aporta</small><h3>Señales y ausencias</h3></span>
+          </header>
+
+          <ul class="signal-list">
+            <li class="signal-positive">
+              <span class="signal-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></span>
+              <span><strong>Trayectoria relacionada</strong><small>Coincidencia alta</small></span>
+            </li>
+            <li class="signal-positive">
+              <span class="signal-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg></span>
+              <span><strong>Experiencia directa</strong><small>Coincidencia alta</small></span>
+            </li>
+            <li class="signal-review">
+              <span class="signal-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 8v5M12 16h.01" /></svg></span>
+              <span><strong>Disponibilidad no indicada</strong><small>Pendiente de validar</small></span>
+            </li>
+          </ul>
+        </article>
+
+        <div class="logic-node logic-arrow" aria-hidden="true">
+          <span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M15 8l4 4-4 4" /></svg>
+          </span>
+        </div>
+
+        <article class="result-card">
+          <div class="result-profile">
+            <header>
+              <span><small>Prioridad resultante</small><strong>Perfil A</strong></span>
+              <b>#1</b>
+            </header>
+            <div class="result-score">
+              <span><strong>86</strong><small>/100</small></span>
+              <em>Encaje alto</em>
+            </div>
           </div>
 
-          <section class="requirements" aria-labelledby="requirements-title">
-            <header class="requirements-heading">
-              <span>
-                <small>Ranking explicado</small>
-                <strong id="requirements-title">Requisitos con más peso</strong>
-              </span>
-              <span class="review-key"><i aria-hidden="true"></i>Pendiente de validar</span>
-            </header>
+          <p class="result-copy">Los requisitos con más peso tienen más impacto. La información ausente sigue visible para que el equipo pueda revisarla.</p>
 
-            <div class="requirement-list">
-              <article class="requirement-row match-positive">
-                <span class="requirement-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
-                </span>
-                <span class="requirement-copy">
-                  <strong>Experiencia en funciones similares</strong>
-                  <small>Trayectoria relacionada detectada en el CV.</small>
-                </span>
-                <span class="requirement-result">
-                  <b class="priority priority-critical">Crítica</b>
-                  <em>Coincidencia alta</em>
-                </span>
-              </article>
-
-              <article class="requirement-row match-positive">
-                <span class="requirement-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
-                </span>
-                <span class="requirement-copy">
-                  <strong>Atención al cliente</strong>
-                  <small>Experiencia directa en entornos de servicio.</small>
-                </span>
-                <span class="requirement-result">
-                  <b class="priority priority-high">Alta</b>
-                  <em>Coincidencia alta</em>
-                </span>
-              </article>
-
-              <article class="requirement-row match-review">
-                <span class="requirement-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M12 8v5M12 16h.01" /></svg>
-                </span>
-                <span class="requirement-copy">
-                  <strong>Disponibilidad</strong>
-                  <small>La información necesita confirmación del candidato.</small>
-                </span>
-                <span class="requirement-result">
-                  <b class="priority priority-medium">Media</b>
-                  <em>Pendiente</em>
-                </span>
-              </article>
-            </div>
-          </section>
+          <div class="ranking-context" aria-label="Posiciones siguientes del ranking ilustrativo">
+            <span><b>#2</b><strong>Perfil B</strong><em>72</em></span>
+            <span><b>#3</b><strong>Perfil C</strong><em>48</em></span>
+          </div>
         </article>
       </div>
 
-      <footer class="selection-bar">
-        <div class="selection-summary">
-          <span class="selection-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="m17 11 2 2 4-4" /></svg>
-          </span>
-          <span><strong>10 candidatos seleccionados</strong><small>Ranking preparado para la siguiente acción</small></span>
-        </div>
-        <div class="selection-actions" aria-label="Acciones disponibles para el ranking">
-          <span>Exportar a Excel</span>
-          <span class="selection-primary">Iniciar contacto</span>
-        </div>
-      </footer>
-
-      <div class="product-explanation">
-        <span class="explanation-mark" aria-hidden="true">
-          <img src="/logo_sonia_icon.png" width="512" height="512" alt="" />
+      <figcaption>
+        <span aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="m17 11 2 2 4-4" /></svg>
         </span>
         <p><strong>SonIA analiza y prioriza.</strong> Tu equipo revisa, selecciona y decide quién avanza.</p>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -221,7 +136,7 @@
   .product-heading :global(h2) {
     font-size: clamp(var(--text-xl), 3.8vw, var(--text-3xl));
     line-height: 1.14;
-    max-width: 780px;
+    max-width: 760px;
   }
 
   .product-heading > p {
@@ -229,669 +144,428 @@
     padding-left: var(--space-5);
   }
 
-  .ranking-shell {
-    background: var(--surface);
+  .ranking-anatomy {
+    background: var(--ink-50);
     border: 1px solid var(--border);
-    border-radius: 24px;
-    box-shadow: 0 24px 70px rgb(37 32 56 / 12%);
+    border-radius: 20px;
+    box-shadow: 0 16px 42px rgb(37 32 56 / 10%);
+    margin: 0;
     overflow: hidden;
   }
 
-  .ranking-shell::before {
-    background: var(--purple-600);
-    content: "";
-    display: block;
-    height: 5px;
-  }
-
-  .ranking-toolbar {
+  .anatomy-heading {
     align-items: center;
-    background: var(--ink-50);
+    background: var(--surface);
     border-bottom: 1px solid var(--border);
     display: flex;
-    gap: var(--space-5);
+    gap: var(--space-4);
     justify-content: space-between;
     padding: var(--space-4) var(--space-5);
   }
 
-  .offer-context,
-  .toolbar-status,
-  .profile-heading,
-  .selection-summary {
-    align-items: center;
-    display: flex;
+  .anatomy-heading > span {
+    background: var(--purple-100);
+    border-radius: var(--radius-full);
+    color: var(--purple-700);
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: var(--tracking-wide);
+    padding: var(--space-1) var(--space-3);
+    text-transform: uppercase;
   }
 
-  .offer-context {
+  .anatomy-heading > div {
+    display: grid;
+    gap: 2px;
+    text-align: right;
+  }
+
+  .anatomy-heading small,
+  .anatomy-card header small,
+  .result-card header small {
+    color: var(--fg3);
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .anatomy-heading strong {
+    color: var(--ink-800);
+    font-size: var(--text-sm);
+  }
+
+  .anatomy-stage {
+    align-items: stretch;
+    display: grid;
     gap: var(--space-3);
+    grid-template-columns: minmax(220px, 1fr) 74px minmax(220px, 1fr) 54px minmax(210px, 0.86fr);
+    padding: var(--space-6);
   }
 
-  .offer-context > span:last-child,
-  .profile-heading > span:last-child,
-  .selection-summary > span:last-child,
-  .panel-heading > span {
+  .anatomy-card,
+  .result-card {
+    border-radius: var(--radius-xl);
+    min-width: 0;
+  }
+
+  .anatomy-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  .anatomy-card > header {
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: auto 1fr;
+    padding: var(--space-4);
+  }
+
+  .anatomy-card header > span:last-child,
+  .result-card header > span {
     display: grid;
     gap: 2px;
   }
 
-  .offer-context small,
-  .profile-heading small,
-  .selection-summary small,
-  .panel-heading small,
-  .requirements-heading small {
-    color: var(--fg3);
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .offer-context strong {
+  .anatomy-card h3 {
     color: var(--ink-900);
     font-size: var(--text-sm);
+    margin: 0;
   }
 
-  .context-icon,
-  .selection-icon {
+  .card-icon {
     align-items: center;
     background: var(--purple-100);
     border-radius: var(--radius-md);
     color: var(--purple-700);
     display: inline-flex;
-    flex: 0 0 auto;
     height: 38px;
     justify-content: center;
     width: 38px;
   }
 
-  svg {
+  .card-icon svg,
+  .signal-mark svg,
+  figcaption svg {
     fill: none;
     height: 18px;
     stroke: currentColor;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-width: 1.75;
+    stroke-width: 1.8;
     width: 18px;
   }
 
-  .toolbar-status {
-    color: var(--fg2);
-    font-size: var(--text-xs);
-    font-weight: 700;
-    gap: var(--space-2);
-  }
-
-  .toolbar-status b {
-    background: var(--gold-100);
-    border-radius: var(--radius-full);
-    color: var(--ink-800);
-    font-size: 0.625rem;
-    margin-left: var(--space-2);
-    padding: var(--space-1) var(--space-3);
-    text-transform: uppercase;
-  }
-
-  .status-dot {
-    background: var(--match-strong);
-    border-radius: var(--radius-full);
-    height: 8px;
-    width: 8px;
-  }
-
-  .ranking-controls {
-    border-bottom: 1px solid var(--border);
+  .factor-list,
+  .signal-list {
     display: grid;
-    gap: var(--space-3);
-    grid-template-columns: minmax(190px, 1fr) auto auto auto;
-    padding: var(--space-4) var(--space-5);
-  }
-
-  .control {
-    align-items: center;
-    background: var(--surface);
-    border: 1px solid var(--ink-300);
-    border-radius: var(--radius-md);
-    color: var(--fg2);
-    display: inline-flex;
-    font-size: var(--text-xs);
-    font-weight: 700;
-    gap: var(--space-2);
-    justify-content: space-between;
-    min-height: 38px;
-    padding: var(--space-2) var(--space-3);
-    white-space: nowrap;
-  }
-
-  .control-search {
-    justify-content: flex-start;
-  }
-
-  .control svg {
-    height: 15px;
-    width: 15px;
-  }
-
-  .control-accent {
-    background: var(--purple-600);
-    border-color: var(--purple-600);
-    color: var(--surface);
-    justify-content: center;
-  }
-
-  .ranking-body {
-    display: grid;
-    grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.42fr);
-    min-height: 570px;
-  }
-
-  .candidate-panel {
-    background: var(--ink-50);
-    border-right: 1px solid var(--border);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: var(--space-5);
-  }
-
-  .panel-heading,
-  .requirements-heading {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .panel-heading strong,
-  .requirements-heading strong {
-    color: var(--ink-900);
-    font-size: var(--text-sm);
-  }
-
-  .panel-heading > b {
-    background: var(--purple-100);
-    border-radius: var(--radius-full);
-    color: var(--purple-700);
-    font-size: 0.625rem;
-    padding: var(--space-1) var(--space-3);
-  }
-
-  .candidate-ranking {
-    display: grid;
-    gap: var(--space-3);
     list-style: none;
-    margin: var(--space-5) 0;
+    margin: 0;
     padding: 0;
   }
 
-  .candidate-card {
+  .factor-list li,
+  .signal-list li {
     align-items: center;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
     display: grid;
     gap: var(--space-3);
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    padding: var(--space-4);
-    position: relative;
+    min-height: 78px;
+    padding: var(--space-3) var(--space-4);
   }
 
-  .candidate-active {
-    background: var(--purple-50);
-    border-color: var(--purple-300);
-    box-shadow: var(--shadow-sm);
+  .factor-list li {
+    grid-template-columns: 1fr auto;
   }
 
-  .candidate-active::before {
-    background: var(--purple-600);
-    border-radius: 0 var(--radius-full) var(--radius-full) 0;
-    content: "";
-    height: 58%;
-    left: 0;
-    position: absolute;
-    top: 21%;
-    width: 3px;
-  }
-
-  .position {
-    color: var(--purple-700);
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    font-weight: 800;
-  }
-
-  .candidate-info,
-  .candidate-score,
-  .requirement-copy,
-  .requirement-result {
-    display: grid;
-  }
-
-  .candidate-info {
-    gap: 3px;
-    min-width: 0;
-  }
-
-  .candidate-info > strong {
-    color: var(--ink-900);
-    font-size: var(--text-sm);
-  }
-
-  .candidate-info > small {
-    color: var(--fg3);
-    font-size: 0.6875rem;
-    line-height: 1.45;
-  }
-
-  .fit {
-    border-radius: var(--radius-full);
-    font-size: 0.5625rem;
-    font-weight: 800;
-    justify-self: start;
-    margin-top: 3px;
-    padding: 2px var(--space-2);
-    text-transform: uppercase;
-  }
-
-  .fit-strong {
-    background: var(--match-strong-bg);
-    color: var(--match-strong);
-  }
-
-  .fit-medium {
-    background: var(--match-mid-bg);
-    color: var(--match-mid);
-  }
-
-  .fit-low {
-    background: var(--match-low-bg);
-    color: var(--match-low);
-  }
-
-  .candidate-score {
-    justify-items: end;
-  }
-
-  .candidate-score b,
-  .detail-score b {
-    color: var(--purple-700);
-    font-family: var(--font-mono);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .candidate-score b {
-    font-size: var(--text-md);
-  }
-
-  .candidate-score small {
-    color: var(--fg3);
-    font-size: 0.5625rem;
-  }
-
-  .panel-note {
-    align-items: center;
-    border-top: 1px solid var(--border);
-    color: var(--purple-700);
-    display: grid;
-    gap: var(--space-3);
+  .signal-list li {
     grid-template-columns: auto 1fr;
-    padding-top: var(--space-4);
   }
 
-  .panel-note > span {
+  .factor-list li + li,
+  .signal-list li + li {
+    border-top: 1px solid var(--border);
+  }
+
+  .factor-list li > span:first-child,
+  .signal-list li > span:last-child {
     display: grid;
     gap: 2px;
   }
 
-  .panel-note strong {
+  .factor-list strong,
+  .signal-list strong {
     color: var(--ink-800);
     font-size: var(--text-xs);
   }
 
-  .panel-note small {
+  .factor-list small,
+  .signal-list small {
     color: var(--fg3);
     font-size: 0.625rem;
   }
 
-  .candidate-detail {
-    display: grid;
-    gap: var(--space-5);
-    grid-template-rows: auto auto 1fr;
-    padding: var(--space-6);
-  }
-
-  .detail-heading {
-    align-items: center;
+  .weight {
     display: flex;
-    gap: var(--space-5);
-    justify-content: space-between;
+    gap: 3px;
   }
 
-  .profile-heading {
-    gap: var(--space-3);
-  }
-
-  .profile-avatar {
-    align-items: center;
-    background: var(--purple-100);
+  .weight i {
+    background: var(--ink-200);
     border-radius: var(--radius-full);
-    color: var(--purple-700);
+    height: 18px;
+    width: 5px;
+  }
+
+  .weight-critical i,
+  .weight-high i:nth-child(-n + 3),
+  .weight-medium i:nth-child(-n + 2) {
+    background: var(--purple-600);
+  }
+
+  .signal-mark {
+    align-items: center;
+    border-radius: var(--radius-full);
     display: inline-flex;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    font-weight: 800;
-    height: 46px;
+    height: 32px;
     justify-content: center;
-    width: 46px;
+    width: 32px;
   }
 
-  .profile-heading strong {
-    color: var(--ink-900);
-    font-size: var(--text-md);
+  .signal-mark svg {
+    height: 16px;
+    width: 16px;
   }
 
-  .detail-score {
-    align-items: center;
-    display: flex;
-    gap: var(--space-3);
-  }
-
-  .detail-score > span {
-    align-items: baseline;
-    background: var(--purple-50);
-    border: 1px solid var(--purple-100);
-    border-radius: var(--radius-lg);
-    display: flex;
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .detail-score b {
-    font-size: var(--text-lg);
-  }
-
-  .detail-score small {
-    color: var(--fg3);
-    font-family: var(--font-mono);
-    font-size: 0.625rem;
-  }
-
-  .detail-score em {
-    background: var(--match-strong-bg);
-    border-radius: var(--radius-full);
-    color: var(--match-strong);
-    font-size: var(--text-xs);
-    font-style: normal;
-    font-weight: 800;
-    padding: var(--space-1) var(--space-3);
-  }
-
-  .candidate-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-  }
-
-  .action-tag {
-    align-items: center;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-full);
-    color: var(--fg2);
-    display: inline-flex;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .action-tag svg {
-    height: 14px;
-    width: 14px;
-  }
-
-  .action-selected {
-    background: var(--match-strong-bg);
-    border-color: rgb(45 126 100 / 25%);
-    color: var(--match-strong);
-  }
-
-  .requirements {
-    border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-    display: grid;
-    overflow: hidden;
-  }
-
-  .requirements-heading {
-    background: var(--ink-50);
-    border-bottom: 1px solid var(--border);
-    padding: var(--space-4);
-  }
-
-  .requirements-heading > span:first-child {
-    display: grid;
-    gap: 2px;
-  }
-
-  .review-key {
-    align-items: center;
-    color: var(--fg3);
-    display: inline-flex;
-    font-size: 0.625rem;
-    font-weight: 700;
-    gap: var(--space-2);
-  }
-
-  .review-key i {
-    background: var(--match-mid);
-    border-radius: var(--radius-full);
-    height: 7px;
-    width: 7px;
-  }
-
-  .requirement-list {
-    display: grid;
-  }
-
-  .requirement-row {
-    align-items: center;
-    display: grid;
-    gap: var(--space-3);
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    min-height: 104px;
-    padding: var(--space-4);
-  }
-
-  .requirement-row + .requirement-row {
-    border-top: 1px solid var(--border);
-  }
-
-  .requirement-icon {
-    align-items: center;
-    border-radius: var(--radius-full);
-    display: inline-flex;
-    height: 34px;
-    justify-content: center;
-    width: 34px;
-  }
-
-  .requirement-icon svg {
-    height: 17px;
-    width: 17px;
-  }
-
-  .match-positive .requirement-icon {
+  .signal-positive .signal-mark {
     background: var(--match-strong-bg);
     color: var(--match-strong);
   }
 
-  .match-review .requirement-icon {
+  .signal-review .signal-mark {
     background: var(--match-mid-bg);
     color: var(--match-mid);
   }
 
-  .requirement-copy {
-    gap: var(--space-1);
-  }
-
-  .requirement-copy strong {
-    color: var(--ink-900);
-    font-size: var(--text-sm);
-  }
-
-  .requirement-copy small {
-    color: var(--fg3);
-    font-size: var(--text-xs);
-    line-height: 1.45;
-  }
-
-  .requirement-result {
-    gap: var(--space-2);
-    justify-items: end;
-  }
-
-  .priority {
-    border-radius: var(--radius-full);
-    font-size: 0.5625rem;
-    padding: 2px var(--space-2);
-    text-transform: uppercase;
-  }
-
-  .priority-critical {
-    background: var(--match-low);
-    color: var(--surface);
-  }
-
-  .priority-high {
-    background: var(--match-low-bg);
-    color: var(--match-low);
-  }
-
-  .priority-medium {
-    background: var(--match-mid-bg);
-    color: var(--match-mid);
-  }
-
-  .requirement-result em {
-    color: var(--match-strong);
-    font-size: 0.6875rem;
-    font-style: normal;
-    font-weight: 800;
-  }
-
-  .match-review .requirement-result em {
-    color: var(--match-mid);
-  }
-
-  .selection-bar {
-    align-items: center;
-    background: var(--purple-900);
-    color: var(--fg-on-brand);
-    display: flex;
-    gap: var(--space-5);
-    justify-content: space-between;
-    padding: var(--space-4) var(--space-5);
-  }
-
-  .selection-summary {
-    gap: var(--space-3);
-  }
-
-  .selection-summary strong {
-    color: var(--fg-on-brand);
-    font-size: var(--text-sm);
-  }
-
-  .selection-summary small {
-    color: rgb(244 245 250 / 66%);
-    letter-spacing: 0;
-    text-transform: none;
-  }
-
-  .selection-icon {
-    background: rgb(255 255 255 / 10%);
-    color: var(--gold-400);
-  }
-
-  .selection-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-  }
-
-  .selection-actions span {
-    border: 1px solid rgb(255 255 255 / 24%);
-    border-radius: var(--radius-md);
-    color: var(--fg-on-brand);
-    font-size: var(--text-xs);
-    font-weight: 700;
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .selection-actions .selection-primary {
-    background: var(--gold-400);
-    border-color: var(--gold-400);
-    color: var(--ink-900);
-  }
-
-  .product-explanation {
-    align-items: center;
-    background: var(--purple-50);
+  .logic-node {
+    align-content: center;
     display: grid;
-    gap: var(--space-4);
-    grid-template-columns: auto 1fr;
-    padding: var(--space-5);
+    gap: var(--space-2);
+    justify-items: center;
+    text-align: center;
   }
 
-  .explanation-mark {
-    border: 5px solid var(--purple-100);
+  .logic-node > span {
+    align-items: center;
+    background: var(--number-bg);
+    border: 1px solid var(--gold-400);
     border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
     display: inline-flex;
     height: 52px;
+    justify-content: center;
     overflow: hidden;
     width: 52px;
   }
 
-  .explanation-mark img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+  .logic-node svg {
+    fill: none;
+    height: 20px;
+    stroke: #564b7f;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+    width: 20px;
   }
 
-  .product-explanation p {
+  .logic-node:not(.logic-arrow) > span {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--gold-400);
+    height: 64px;
+    overflow: visible;
+    width: 64px;
+  }
+
+  .plus-mark svg {
+    height: 38px;
+    stroke: var(--gold-400);
+    stroke-width: 2;
+    width: 38px;
+  }
+
+  .logic-node small {
+    color: var(--fg3);
+    font-size: 0.5625rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .logic-arrow > span {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 64px;
+    overflow: visible;
+    width: 64px;
+  }
+
+  .logic-arrow svg {
+    height: 48px;
+    stroke: var(--gold-400);
+    stroke-width: 2;
+    width: 48px;
+  }
+
+  .result-card {
+    background: var(--purple-900);
+    color: var(--fg-on-brand);
+    display: grid;
+    gap: var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .result-profile {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .result-profile > header {
+    align-items: start;
+    display: flex;
+    gap: var(--space-3);
+    justify-content: space-between;
+  }
+
+  .result-profile header small {
+    color: rgb(244 245 250 / 58%);
+  }
+
+  .result-profile header strong {
+    color: var(--fg-on-brand);
+    font-size: var(--text-md);
+  }
+
+  .result-profile header > b {
+    color: var(--gold-400);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  .result-score {
+    align-items: end;
+    display: flex;
+    gap: var(--space-3);
+    justify-content: space-between;
+  }
+
+  .result-score > span {
+    align-items: baseline;
+    display: flex;
+  }
+
+  .result-score strong {
+    color: var(--fg-on-brand);
+    font-family: var(--font-mono);
+    font-size: 3.4rem;
+    line-height: 0.9;
+  }
+
+  .result-score small {
+    color: rgb(244 245 250 / 58%);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+  }
+
+  .result-score em {
+    background: var(--match-strong-bg);
+    border-radius: var(--radius-full);
+    color: var(--match-strong);
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 800;
+    padding: var(--space-1) var(--space-3);
+    white-space: nowrap;
+  }
+
+  .result-copy {
+    color: rgb(244 245 250 / 72%);
+    font-size: var(--text-xs);
+    line-height: 1.55;
+  }
+
+  .ranking-context {
+    align-self: end;
+    border-top: 1px solid rgb(255 255 255 / 14%);
+    display: grid;
+    padding-top: var(--space-3);
+  }
+
+  .ranking-context > span {
+    align-items: center;
+    display: grid;
+    gap: var(--space-2);
+    grid-template-columns: auto 1fr auto;
+    padding-block: var(--space-2);
+  }
+
+  .ranking-context > span + span {
+    border-top: 1px solid rgb(255 255 255 / 10%);
+  }
+
+  .ranking-context b,
+  .ranking-context em {
+    color: var(--gold-400);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    font-style: normal;
+  }
+
+  .ranking-context strong {
+    color: var(--fg-on-brand);
+    font-size: var(--text-xs);
+  }
+
+  figcaption {
+    align-items: center;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    padding: var(--space-4);
+  }
+
+  figcaption > span {
+    color: var(--purple-600);
+    display: inline-flex;
+  }
+
+  figcaption p,
+  figcaption strong {
     color: var(--purple-800);
     font-size: var(--text-sm);
-    line-height: 1.65;
-    margin: 0;
   }
 
-  @media (max-width: 980px) {
-    .ranking-controls {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media (max-width: 1040px) {
+    .anatomy-stage {
+      grid-template-columns: minmax(220px, 1fr) 74px minmax(220px, 1fr);
     }
 
-    .ranking-body {
-      grid-template-columns: 1fr;
-    }
-
-    .candidate-panel {
-      border-bottom: 1px solid var(--border);
-      border-right: 0;
-    }
-
-    .candidate-ranking {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .candidate-card {
-      align-content: start;
-      grid-template-columns: auto 1fr;
-    }
-
-    .candidate-score {
+    .result-card {
       grid-column: 1 / -1;
-      grid-row: 2;
-      justify-items: start;
-      padding-left: calc(var(--space-3) + 22px);
     }
 
-    .panel-note {
+    .logic-arrow {
       display: none;
     }
   }
@@ -905,98 +579,43 @@
     .product-heading > p {
       max-width: 680px;
     }
-
-    .selection-bar {
-      align-items: flex-start;
-      flex-direction: column;
-    }
   }
 
   @media (max-width: 680px) {
-    .ranking-shell {
+    .ranking-anatomy {
       border-radius: var(--radius-xl);
     }
 
-    .ranking-toolbar {
+    .anatomy-heading {
       align-items: flex-start;
       flex-direction: column;
     }
 
-    .ranking-controls {
+    .anatomy-heading > div {
+      text-align: left;
+    }
+
+    .anatomy-stage {
       grid-template-columns: 1fr;
-    }
-
-    .candidate-ranking {
-      grid-template-columns: 1fr;
-    }
-
-    .candidate-card {
-      grid-template-columns: auto minmax(0, 1fr) auto;
-    }
-
-    .candidate-score {
-      grid-column: auto;
-      grid-row: auto;
-      justify-items: end;
-      padding-left: 0;
-    }
-
-    .candidate-detail {
       padding: var(--space-4);
     }
 
-    .detail-heading {
-      align-items: flex-start;
-      flex-direction: column;
+    .logic-node {
+      min-height: 78px;
     }
 
-    .requirements-heading {
-      align-items: flex-start;
-      gap: var(--space-3);
+    .result-card {
+      grid-column: auto;
+      grid-template-columns: 1fr;
     }
 
-    .requirement-row {
-      align-items: start;
-      grid-template-columns: auto 1fr;
-    }
-
-    .requirement-result {
-      grid-column: 2;
-      justify-items: start;
-    }
-
-    .selection-actions {
+    .logic-arrow {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      width: 100%;
     }
 
-    .selection-actions span {
-      text-align: center;
-    }
-
-    .selection-primary {
-      grid-column: 1 / -1;
-    }
-  }
-
-  @media (max-width: 420px) {
-    .candidate-card {
-      align-items: start;
-      grid-template-columns: auto minmax(0, 1fr);
-    }
-
-    .candidate-score {
-      grid-column: 2;
-      justify-items: start;
-    }
-
-    .toolbar-status > span:not(.status-dot) {
-      display: none;
-    }
-
-    .review-key {
-      display: none;
+    figcaption {
+      align-items: flex-start;
+      justify-content: flex-start;
     }
   }
 </style>

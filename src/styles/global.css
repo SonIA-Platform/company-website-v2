@@ -12,6 +12,7 @@ html {
   color: var(--fg1);
   font-family: var(--font-body);
   scroll-behavior: smooth;
+  transition: background 240ms var(--ease), color 240ms var(--ease);
 }
 
 body {
@@ -27,6 +28,14 @@ body {
   line-height: var(--leading-normal);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background 240ms var(--ease), color 240ms var(--ease);
+}
+
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 8% 8%, rgb(105 94 156 / 22%), transparent 28rem),
+    radial-gradient(circle at 92% 12%, rgb(251 195 60 / 7%), transparent 24rem),
+    linear-gradient(180deg, #1d1a25 0%, var(--paper) 42%, #1b1822 100%);
 }
 
 img,
@@ -148,6 +157,14 @@ p {
 
 .button-primary:hover {
   background: var(--purple-700);
+}
+
+html[data-theme="dark"] .button-primary:hover {
+  background: var(--purple-500);
+}
+
+html[data-theme="dark"] .eyebrow {
+  color: var(--purple-300);
 }
 
 .button-secondary {
