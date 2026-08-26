@@ -2,24 +2,28 @@
 import Layout from '@/layouts/Layout.astro'
 
 import Hero from '@/sections/Hero.astro'
+import Problem from '@/sections/Problem.astro'
 import Footer from '@/sections/Footer.astro'
 import Header from '@/sections/Header.astro'
 import Process from '@/sections/Process.astro'
 import Benefits from '@/sections/Benefits.astro'
 import ProductPreview from '@/sections/ProductPreview.astro'
+import Faq from '@/sections/Faq.astro'
 import FinalCta from '@/sections/FinalCta.astro'
 ---
 
 <Layout
-  title="SonIA | Ranking explicable de candidatos para selección de volumen"
-  description="SonIA ayuda a equipos de selección a priorizar grandes volúmenes de CVs según los requisitos de cada oferta, entender el ranking y preparar un ranking accionable."
+  title="SonIA | Cribado de CV con IA para selección de alto volumen"
+  description="SonIA analiza cada CV frente a los requisitos de tu oferta y devuelve una shortlist ordenada y explicada para ETT y empresas de facility services."
 >
   <Header />
   <main id="contenido">
     <Hero />
+    <Problem />
     <Process />
     <Benefits />
     <ProductPreview />
+    <Faq />
     <FinalCta />
   </main>
   <Footer />

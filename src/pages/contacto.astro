@@ -42,41 +42,40 @@ const canonical = Astro.site ? new URL('/contacto', Astro.site).toString() : und
         <form method="post">
           <div class="field-grid">
             <div class="field">
-              <label for="name">Nombre y apellidos *</label>
+              <label for="name">Nombre *</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="email">Email profesional *</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
             </div>
             <div class="field">
               <label for="company">Empresa *</label>
               <input id="company" name="company" type="text" autocomplete="organization" required />
             </div>
             <div class="field">
-              <label for="role">Cargo</label>
-              <input id="role" name="role" type="text" autocomplete="organization-title" />
+              <label for="email">Email corporativo *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
             </div>
             <div class="field">
-              <label for="phone">Teléfono</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+              <label for="phone">Teléfono *</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
             </div>
             <div class="field">
-              <label for="volume">Volumen habitual de CVs por oferta</label>
-              <select id="volume" name="volume">
+              <label for="processes">Procesos al mes *</label>
+              <select id="processes" name="processes" required>
                 <option value="">Selecciona una opción</option>
-                <option value="up-to-50">Hasta 50</option>
-                <option value="50-to-100">Entre 50 y 100</option>
-                <option value="100-to-500">Entre 100 y 500</option>
-                <option value="more-than-500">Más de 500</option>
-                <option value="explain">Prefiero explicarlo</option>
+                <option value="less-than-5">Menos de 5</option>
+                <option value="5-to-10">5-10</option>
+                <option value="10-to-25">10-25</option>
+                <option value="more-than-25">Más de 25</option>
               </select>
             </div>
-          </div>
-
-          <div class="field">
-            <label for="message">¿Cómo gestionáis hoy el primer filtro y qué os gustaría mejorar? *</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <div class="field">
+              <label for="cvs-per-process">CVs por proceso *</label>
+              <select id="cvs-per-process" name="cvsPerProcess" required>
+                <option value="">Selecciona una opción</option>
+                <option value="less-than-50">Menos de 50</option>
+                <option value="50-to-150">50-150</option>
+                <option value="more-than-150">Más de 150</option>
+              </select>
+            </div>
           </div>
 
           <label class="consent" for="privacy">

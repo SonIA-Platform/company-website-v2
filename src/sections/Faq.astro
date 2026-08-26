@@ -1,0 +1,151 @@
+<section class="faq" id="preguntas-frecuentes" aria-labelledby="faq-title">
+  <div class="container faq-layout">
+    <header class="faq-heading">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 id="faq-title">Lo que necesitas saber antes de probar SonIA</h2>
+      <p>Respuestas directas sobre tiempos, puesta en marcha, criterio humano y tratamiento de los CVs.</p>
+    </header>
+
+    <div class="faq-list">
+      <details name="faq">
+        <summary>¿Cuánto tarda SonIA en cribar 300 CVs?</summary>
+        <p>Menos de lo que tarda tu equipo en leer los diez primeros. Un proceso de 150 CVs está listo en unos 20 minutos, frente a las 4-6 horas de revisión manual. Los procesos grandes, de 300 CVs o más, tardan algo más pero siguen siendo cuestión de minutos, no de días.</p>
+      </details>
+      <details name="faq">
+        <summary>¿Tengo que cambiar de ATS o integrar algo?</summary>
+        <p>No. SonIA funciona en paralelo a lo que ya usas. Subes los CVs tal y como los descargas de cualquier portal o ATS y trabajas desde el navegador. No hay instalación ni proyecto de integración.</p>
+      </details>
+      <details name="faq">
+        <summary>¿SonIA decide qué candidatos se descartan?</summary>
+        <p>No, y por diseño. SonIA ordena y explica; descartar, llamar o entrevistar lo decide siempre una persona de tu equipo. Es lo que exige el reglamento europeo de inteligencia artificial para la selección de personal y es como está construido el producto desde el primer día.</p>
+      </details>
+      <details name="faq">
+        <summary>¿En qué se diferencia de filtrar por palabras clave en otros portales?</summary>
+        <p>Un filtro por palabras clave descarta a quien escribió su experiencia con otras palabras. SonIA lee el CV completo e interpreta la experiencia real: reconoce que «auxiliar de servicios en un hospital» es experiencia en limpieza hospitalaria aunque no aparezca esa expresión.</p>
+      </details>
+      <details name="faq">
+        <summary>¿Qué pasa con la protección de datos de los candidatos?</summary>
+        <p>Los datos de los candidatos son tuyos: SonIA los trata únicamente como encargado del tratamiento, según el RGPD. No se usan para entrenar modelos ni se comparten entre clientes, y cada cliente trabaja con sus datos aislados.</p>
+      </details>
+      <details name="faq">
+        <summary>¿Puedo reutilizar los CVs de procesos anteriores?</summary>
+        <p>Sí. Cada CV procesado se queda en tu base de datos y puedes buscar en ella al abrir una vacante nueva. Es la forma más directa de reducir lo que gastas en publicar ofertas.</p>
+      </details>
+      <details name="faq">
+        <summary>¿Para qué tipo de empresas está pensado SonIA?</summary>
+        <p>Para ETT y empresas de facility services que seleccionan perfiles operativos en volumen: limpieza, logística, mantenimiento, hostelería, eventos y seguridad. Encaja especialmente bien en equipos de 2 a 10 personas que gestionan diez o más procesos al mes.</p>
+      </details>
+      <details name="faq">
+        <summary>¿Cuánto cuesta SonIA?</summary>
+        <p>Depende del número de procesos y de CVs que gestiones al mes. Es una cuota mensual que incluye un volumen determinado de ambos, sin permanencia. En la demo lo calculamos con tus volúmenes reales y te decimos en cuánto tiempo se paga sola.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    background: var(--surface);
+    padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+  }
+
+  .faq-layout {
+    align-items: start;
+    display: grid;
+    gap: clamp(var(--space-8), 7vw, var(--space-20));
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  }
+
+  .faq-heading {
+    display: grid;
+    gap: var(--space-4);
+    position: sticky;
+    top: 112px;
+  }
+
+  .faq-heading h2 {
+    font-size: clamp(var(--text-xl), 3.8vw, var(--text-3xl));
+    line-height: 1.14;
+  }
+
+  .faq-heading > p:last-child {
+    max-width: 520px;
+  }
+
+  .faq-list {
+    border-top: 1px solid var(--border);
+  }
+
+  details {
+    border-bottom: 1px solid var(--border);
+  }
+
+  summary {
+    align-items: center;
+    color: var(--ink-800);
+    cursor: pointer;
+    display: grid;
+    font-size: var(--text-base);
+    font-weight: 800;
+    gap: var(--space-5);
+    grid-template-columns: 1fr auto;
+    list-style: none;
+    padding-block: var(--space-5);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::after {
+    align-items: center;
+    background: var(--purple-100);
+    border-radius: var(--radius-full);
+    color: var(--purple-700);
+    content: "+";
+    display: inline-flex;
+    font-family: var(--font-mono);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    height: 34px;
+    justify-content: center;
+    line-height: 1;
+    transition: rotate var(--dur) var(--ease);
+    width: 34px;
+  }
+
+  details[open] summary::after {
+    rotate: 45deg;
+  }
+
+  summary:focus-visible {
+    border-radius: var(--radius-md);
+    box-shadow: var(--ring);
+    outline: none;
+  }
+
+  details p {
+    max-width: 760px;
+    padding: 0 var(--space-12) var(--space-6) 0;
+  }
+
+  @media (max-width: 780px) {
+    .faq-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-heading {
+      position: static;
+    }
+  }
+
+  @media (max-width: 480px) {
+    summary {
+      font-size: var(--text-sm);
+    }
+
+    details p {
+      padding-right: 0;
+    }
+  }
+</style>

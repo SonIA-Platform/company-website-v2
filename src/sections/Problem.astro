@@ -1,0 +1,139 @@
+<section class="problem" id="problema" aria-labelledby="problem-title">
+  <div class="container problem-layout">
+    <header class="problem-heading">
+      <p class="eyebrow">El problema</p>
+      <h2 id="problem-title">Una oferta, 300 CVs y nadie que pueda leerlos todos</h2>
+      <p>Si debes contratar personal operativo —limpieza, logística, mantenimiento, hostelería o eventos— el cuello de botella no es encontrar candidatos. Es leer sus CV.</p>
+    </header>
+
+    <div class="problem-points">
+      <article>
+        <strong>~300</strong>
+        <div>
+          <h3>CVs por oferta</h3>
+          <p>Leerlos a fondo, uno a uno, no es realista para un equipo de RRHH con múltiples procesos abiertos.</p>
+        </div>
+      </article>
+      <article>
+        <strong>3-4</strong>
+        <div>
+          <h3>días de filtro manual</h3>
+          <p>Horas que salen de las entrevistas, del cliente y de la cobertura.</p>
+        </div>
+      </article>
+      <article>
+        <strong>&gt;50%</strong>
+        <div>
+          <h3>sin revisar</h3>
+          <p>Buen talento que se enfría o al que llamas cuando ya ha encontrado otro trabajo.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="problem-close">Y cuando un cliente te pide <strong>30 operarios en 48 horas</strong>, el equipo entero colapsa.</p>
+  </div>
+</section>
+
+<style>
+  .problem {
+    background: var(--purple-900);
+    color: var(--fg-on-brand);
+    padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+  }
+
+  .problem-layout,
+  .problem-heading {
+    display: grid;
+  }
+
+  .problem-layout {
+    gap: var(--space-10);
+  }
+
+  .problem-heading {
+    gap: var(--space-4);
+    max-width: 900px;
+  }
+
+  .problem-heading .eyebrow {
+    color: var(--gold-400);
+  }
+
+  .problem-heading h2 {
+    color: var(--fg-on-brand);
+    font-size: clamp(var(--text-xl), 4.2vw, var(--text-3xl));
+    line-height: 1.14;
+  }
+
+  .problem-heading > p:last-child {
+    color: rgb(244 245 250 / 78%);
+    font-size: var(--text-md);
+    max-width: 780px;
+  }
+
+  .problem-points {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .problem-points article {
+    background: rgb(255 255 255 / 6%);
+    border: 1px solid rgb(255 255 255 / 13%);
+    border-radius: var(--radius-xl);
+    display: grid;
+    gap: var(--space-5);
+    grid-template-rows: auto 1fr;
+    padding: var(--space-6);
+  }
+
+  .problem-points article > strong {
+    color: var(--gold-400);
+    font-family: var(--font-mono);
+    font-size: clamp(var(--text-xl), 4vw, var(--text-3xl));
+    line-height: 1;
+  }
+
+  .problem-points article > div {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .problem-points h3 {
+    color: var(--fg-on-brand);
+    font-size: var(--text-md);
+  }
+
+  .problem-points p {
+    color: rgb(244 245 250 / 70%);
+    font-size: var(--text-sm);
+  }
+
+  .problem-close {
+    border-left: 3px solid var(--gold-400);
+    color: var(--fg-on-brand);
+    font-size: clamp(var(--text-base), 2vw, var(--text-lg));
+    padding-left: var(--space-5);
+  }
+
+  .problem-close strong {
+    color: var(--gold-400);
+  }
+
+  @media (max-width: 760px) {
+    .problem-points {
+      grid-template-columns: 1fr;
+    }
+
+    .problem-points article {
+      grid-template-columns: 90px 1fr;
+      grid-template-rows: auto;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .problem-points article {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
