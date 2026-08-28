@@ -12,6 +12,7 @@ html {
   color: var(--fg1);
   font-family: var(--font-body);
   scroll-behavior: smooth;
+  scroll-padding-top: 104px;
   transition: background 240ms var(--ease), color 240ms var(--ease);
 }
 
@@ -205,6 +206,10 @@ html[data-theme="dark"] .eyebrow {
 }
 
 @media (max-width: 720px) {
+  html {
+    scroll-padding-top: 164px;
+  }
+
   .section {
     padding: var(--space-16) 0;
   }

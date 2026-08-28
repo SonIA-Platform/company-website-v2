@@ -8,7 +8,7 @@
       <p>SonIA no busca una coincidencia genérica. Relaciona lo que exige la oferta con las señales disponibles en cada CV y deja el resultado preparado para revisión.</p>
     </header>
 
-    <figure class="ranking-anatomy" aria-labelledby="anatomy-title">
+    <figure class="ranking-anatomy" aria-labelledby="product-title">
       <header class="anatomy-heading">
         <span>Esquema ilustrativo</span>
       </header>
@@ -25,20 +25,20 @@
           <ul class="factor-list">
             <li>
               <span><strong>Experiencia similar</strong><small>Requisito crítico</small></span>
-              <span class="weight weight-critical" aria-label="Peso crítico"><i></i><i></i><i></i><i></i></span>
+              <span class="weight weight-critical" role="img" aria-label="Peso crítico"><i></i><i></i><i></i><i></i></span>
             </li>
             <li>
               <span><strong>Atención al cliente</strong><small>Importancia alta</small></span>
-              <span class="weight weight-high" aria-label="Peso alto"><i></i><i></i><i></i><i></i></span>
+              <span class="weight weight-high" role="img" aria-label="Peso alto"><i></i><i></i><i></i><i></i></span>
             </li>
             <li>
               <span><strong>Disponibilidad</strong><small>Importancia media</small></span>
-              <span class="weight weight-medium" aria-label="Peso medio"><i></i><i></i><i></i><i></i></span>
+              <span class="weight weight-medium" role="img" aria-label="Peso medio"><i></i><i></i><i></i><i></i></span>
             </li>
           </ul>
         </article>
 
-        <div class="logic-node" aria-label="SonIA relaciona la información">
+        <div class="logic-node" role="img" aria-label="SonIA relaciona la oferta con el CV">
           <span class="plus-mark" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
           </span>
@@ -88,7 +88,7 @@
 
           <p class="result-copy">Los requisitos con más peso tienen más impacto. La información ausente sigue visible para que el equipo pueda revisarla.</p>
 
-          <div class="ranking-context" aria-label="Posiciones siguientes del ranking ilustrativo">
+          <div class="ranking-context" role="group" aria-label="Posiciones siguientes del ranking ilustrativo">
             <span><b>#2</b><strong>Perfil B</strong><em>72</em></span>
             <span><b>#3</b><strong>Perfil C</strong><em>48</em></span>
           </div>
@@ -252,7 +252,7 @@
 
   .requirement-card header small {
     background: var(--number-bg);
-    color: var(--ink-800);
+    color: var(--fg-on-gold);
   }
 
   .evidence-card header small {
@@ -273,7 +273,7 @@
 
   .requirement-card .card-icon {
     background: var(--number-bg);
-    color: var(--ink-800);
+    color: var(--fg-on-gold);
   }
 
   .card-icon b {

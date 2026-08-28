@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand animate-blurred-fade-in animate-duration-slower" href="/" aria-label="SonIA, inicio">
-      <img src="/logo.png" width="1466" height="638" alt="SonIA" />
+      <img src="/logo.webp" width="480" height="209" alt="SonIA" />
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="#problema">El problema</a>
@@ -14,7 +14,7 @@
       <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" /></svg>
       <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41" /></svg>
     </button>
-    <a class="button button-primary header-cta" href="#contacto">Solicitar una demo</a>
+    <a class="button button-primary header-cta" href="/contacto">Solicitar una demo</a>
   </div>
 </header>
 
@@ -33,7 +33,11 @@
   themeToggle?.addEventListener('click', () => {
     const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = nextTheme;
-    localStorage.setItem('sonia-theme', nextTheme);
+    try {
+      localStorage.setItem('sonia-theme', nextTheme);
+    } catch {
+      // The selected theme still applies for the current page.
+    }
     updateThemeToggle();
   });
 </script>
@@ -168,7 +172,7 @@
     color: var(--purple-300);
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 980px) {
     .header-inner {
       flex-wrap: wrap;
       gap: var(--space-4);
@@ -178,6 +182,8 @@
     .nav {
       order: 3;
       overflow-x: auto;
+      padding-bottom: var(--space-1);
+      scrollbar-width: thin;
       width: 100%;
     }
 
@@ -187,7 +193,13 @@
     }
   }
 
-  @media (min-width: 761px) {
+  @media (max-width: 560px) {
+    .header-cta {
+      display: none;
+    }
+  }
+
+  @media (min-width: 981px) {
     .header-cta {
       margin-left: 0;
     }
