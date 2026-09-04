@@ -1,1 +1,0 @@
-Follow the repository-root `AGENTS.md` before proposing or applying changes. SonIA is an Astro corporate website with a strict purple/gold Montserrat design system. Do not invent commercial claims or copy the React UI kit directly into production.
